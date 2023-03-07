@@ -1,0 +1,70 @@
+# #!/bin/sh
+
+# # COMMIT_MSG_FILE=$1
+# # COMMIT_SOURCE=$2
+# # SHA1=$3
+# BRANCH_NAME=$(git symbolic-ref --short HEAD)
+# JIRA_ISSUE_KEY_PATTERN='[A-Z]{2,9}-[0-9]{1,9}-'
+# # Output colors
+# red='\033[0;31m';
+# green='\033[0;32m';
+# yellow='\033[0;33m';
+# default='\033[0;m';
+
+# echo "${red}"
+# echo "                                         "
+# echo "                   |ZZzzz                "
+# echo "                   |                     "
+# echo "                   |                     "
+# echo "      |ZZzzz      /^\            |ZZzzz  "
+# echo "      |          |~~~|           |       "
+# echo "      |        |-     -|        / \      "
+# echo "     /^\       |[]+    |       |^^^|     "
+# echo "  |^^^^^^^|    |    +[]|       |   |     "
+# echo "  |    +[]|/\/\/\/\^/\/\/\/\/|^^^^^^^|   "
+# echo "  |+[]+   |~~~~~~~~~~~~~~~~~~|    +[]|   "
+# echo "  |       |  []   /^\   []   |+[]+   |   "
+# echo "  |   +[]+|  []  || ||  []   |   +[]+|   "
+# echo "  |[]+    |      || ||       |[]+    |   "
+# echo "  |_______|------------------|_______|   "
+# echo "                                         "
+# echo "                                         "
+# echo "  ${green}                               "
+# echo "  You have to commit your code   " 
+# echo "  To Gitlab as well !!!!!        "
+# echo "                                 "
+# echo "  ${red}                         "
+# echo "  P.S: Your code is bad.         "
+# echo "       Do not ever commit again  "
+# echo "                                 "
+# echo "                                 "
+# echo "${default}"
+
+
+# BRANCH_NAME=$(git symbolic-ref --short HEAD)
+# JIRA_ISSUE_KEY_PATTERN='[A-Z]{2,9}-[0-9]{1,9}-'
+# LAST_COMMIT_MSG=$(git log -1 --pretty=%B)
+# # LAST_COMMIT_MSG="shachar 1111111"
+# JIRA_ISSUE_KEY=""
+# NEW_COMMIT_MSG=""
+
+# if ! [[ $BRANCH_NAME =~ $JIRA_ISSUE_KEY_PATTERN ]]; then
+#   echo "-----> Did not find a branch name containts a jira issue"
+#   else
+#   echo "-----> Found branch name containts a jira issue - branch name : $BRANCH_NAME"
+#   JIRA_ISSUE_KEY=$(echo $BRANCH_NAME | sed -r 's/$JIRA_ISSUE_KEY_PATTERN/g/')
+#   NEW_COMMIT_MSG="$JIRA_ISSUE_KEY $LAST_COMMIT_MSG"
+#     if ! [[ $LAST_COMMIT_MSG =~ $JIRA_ISSUE_KEY_PATTERN ]]; then
+#         echo "-----> Error: Commit message must contain a JIRA key, e.g. ABC-123"
+#         echo "-----> Updating commit message..."
+#         echo $NEW_COMMIT_MSG
+#         git commit --amend -m "$NEW_COMMIT_MSG"
+#         git push -f
+#         exit 0;
+#         else
+#         echo "-----> Commit message contains a JIRA key - commit : ${LAST_COMMIT_MSG}"
+#     fi
+# fi
+# #
+# exit 0;
+
